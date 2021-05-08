@@ -1,0 +1,29 @@
+.tic-tac-toe-container {
+  color: #545454;
+  display: flex;
+  justify-content: center;
+}
+
+.game-grid {
+  display: grid;
+  min-width: 100vmin;
+  min-height: 100vmin;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.game-cell {
+  background: #f4c6a6;
+  font-size: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+@media screen and (min-width: 720px) {
+  .game-grid {
+    min-width: calc(100vmin - 300px);
+    min-height: calc(100vmin - 300px);
+  }
+}

@@ -4,7 +4,7 @@ import { Card, Col, Row } from "react-bootstrap";
 function WhatIKnow() {
   return (
     <>
-      <h1 className="text-center mb-5 mt-3">What I Know?</h1>
+      <h1 className="text-center my-4">What I Know?</h1>
       <Row>
         <Col md={3} className="py-2">
           <Card>

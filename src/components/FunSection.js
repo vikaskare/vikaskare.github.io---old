@@ -9,10 +9,10 @@ let games = [
     link: "/rock-paper-scissors",
   },
   {
-    title: "Tik Tac Toe",
-    image: "/images/tik-tac-toe.png",
+    title: "Tic Tac Toe",
+    image: "/images/tic-tac-toe.png",
     // description: "Tik Tok Toe",
-    link: "/tik-tac-toe",
+    link: "/tic-tac-toe",
   },
 ];
 function FunSection() {
@@ -22,7 +22,7 @@ function FunSection() {
       <hr />
       <Row>
         {games.map(({ title, image, description, link }) => (
-          <Col md={4} key={title}>
+          <Col md={4} key={title} className="py-3">
             <FunCard
               title={title}
               image={image}

@@ -15,7 +15,7 @@ function RockPaperScissors() {
     const random = Math.floor(Math.random() * array.length);
     let comChoise = array[random];
     let currentWinner = Winner(choise, comChoise);
-    console.log(choise + " " + comChoise + " " + currentWinner);
+    // console.log(choise + " " + comChoise + " " + currentWinner);
     let tempUserScore = state.userScore;
     let tempComputerScore = state.computerScore;
     if (currentWinner === 1) {
@@ -32,8 +32,8 @@ function RockPaperScissors() {
     });
   }
   function Winner(user, computer) {
-    console.log("* ");
-    console.log(user + " " + computer);
+    // console.log("* ");
+    // console.log(user + " " + computer);
     if (user === computer) {
       return 0;
     }

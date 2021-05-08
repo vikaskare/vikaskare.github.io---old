@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import "./styles/Index.css";
 import Announcement from "./components/Announcement";
 import RockPaperScissors from "./components/rock-paper-scissors/RockPaperScissors";
+import TicTacToe from "./components/tic-tac-toe/TicTacToe";
 function App() {
   return (
     <div>
@@ -17,6 +18,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/rock-paper-scissors" component={RockPaperScissors} />
+            <Route path="/tic-tac-toe" component={TicTacToe} />
           </Switch>
         </div>
         <Footer />
