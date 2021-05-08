@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import About from "./components/About";
+import Footer from "./components/Footer";
+import "./styles/Index.css";
+import Announcement from "./components/Announcement";
+import RockPaperScissors from "./components/rock-paper-scissors/RockPaperScissors";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        {/* <Announcement show={true} variant="warning" /> */}
+        <Header />
+        <div className="body">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/rock-paper-scissors" component={RockPaperScissors} />
+          </Switch>
+        </div>
+        <Footer />
+      </Router>
     </div>
   );
 }

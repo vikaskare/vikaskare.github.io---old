@@ -1,0 +1,6 @@
+#banner {
+  background-image: url("https://source.unsplash.com/1600x900/?nature,water");
+  min-height: calc(100vh - 150px);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
