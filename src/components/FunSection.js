@@ -5,14 +5,17 @@ let games = [
   {
     title: "Rock Paper Scissors",
     image: "/images/rock-paper-scissors.svg",
-    // description: "Rock Paper Scissors",
     link: "/rock-paper-scissors",
   },
   {
     title: "Tic Tac Toe",
     image: "/images/tic-tac-toe.png",
-    // description: "Tik Tok Toe",
     link: "/tic-tac-toe",
+  },
+  {
+    title: "Snake Game",
+    image: "/images/snake.png",
+    link: "/snake-game",
   },
 ];
 function FunSection() {

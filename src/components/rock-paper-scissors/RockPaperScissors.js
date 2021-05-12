@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Row, Container } from "react-bootstrap";
-
+import "../../styles/RockPaperScissor.css";
 function RockPaperScissors() {
   const [state, setState] = useState({
     winner: "",

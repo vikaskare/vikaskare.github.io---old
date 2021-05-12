@@ -7,18 +7,20 @@ import "./styles/Index.css";
 import Announcement from "./components/Announcement";
 import RockPaperScissors from "./components/rock-paper-scissors/RockPaperScissors";
 import TicTacToe from "./components/tic-tac-toe/TicTacToe";
+import SnakeGame from "./components/snake-game/SnakeGame";
 function App() {
   return (
     <div>
       <Router>
         {/* <Announcement show={true} variant="warning" /> */}
-        <Header />
+
         <div className="body">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/rock-paper-scissors" component={RockPaperScissors} />
             <Route path="/tic-tac-toe" component={TicTacToe} />
+            <Route path="/snake-game" component={SnakeGame} />
           </Switch>
         </div>
         <Footer />

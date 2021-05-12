@@ -1,6 +1,5 @@
-.game-container-rps {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 700px;
+.game-object:hover {
+  transform: scale(1.01);
+  /* border: 2px solid rgb(12, 182, 69);
+  border-radius: 50%; */
 }
