@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.2742d23e.chunk.css",
-    "main.js": "/static/js/main.92f599c5.chunk.js",
-    "main.js.map": "/static/js/main.92f599c5.chunk.js.map",
+    "main.css": "/static/css/main.cefed9f8.chunk.css",
+    "main.js": "/static/js/main.093509de.chunk.js",
+    "main.js.map": "/static/js/main.093509de.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.faf562e3.js",
     "runtime-main.js.map": "/static/js/runtime-main.faf562e3.js.map",
-    "static/js/2.201a2819.chunk.js": "/static/js/2.201a2819.chunk.js",
-    "static/js/2.201a2819.chunk.js.map": "/static/js/2.201a2819.chunk.js.map",
+    "static/js/2.31807e0f.chunk.js": "/static/js/2.31807e0f.chunk.js",
+    "static/js/2.31807e0f.chunk.js.map": "/static/js/2.31807e0f.chunk.js.map",
     "static/js/3.845adfa7.chunk.js": "/static/js/3.845adfa7.chunk.js",
     "static/js/3.845adfa7.chunk.js.map": "/static/js/3.845adfa7.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.2742d23e.chunk.css.map": "/static/css/main.2742d23e.chunk.css.map",
-    "static/js/2.201a2819.chunk.js.LICENSE.txt": "/static/js/2.201a2819.chunk.js.LICENSE.txt"
+    "static/css/main.cefed9f8.chunk.css.map": "/static/css/main.cefed9f8.chunk.css.map",
+    "static/js/2.31807e0f.chunk.js.LICENSE.txt": "/static/js/2.31807e0f.chunk.js.LICENSE.txt",
+    "static/media/SnakeGame.css": "/static/media/apple.99b15a67.png"
   },
   "entrypoints": [
     "static/js/runtime-main.faf562e3.js",
-    "static/js/2.201a2819.chunk.js",
-    "static/css/main.2742d23e.chunk.css",
-    "static/js/main.92f599c5.chunk.js"
+    "static/js/2.31807e0f.chunk.js",
+    "static/css/main.cefed9f8.chunk.css",
+    "static/js/main.093509de.chunk.js"
   ]
 }
