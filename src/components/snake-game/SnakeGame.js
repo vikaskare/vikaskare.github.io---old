@@ -18,7 +18,7 @@ function SnakeGame() {
   const [updateValue, setUpdateValue] = useState(null);
   const [gameStatus, setGameStatus] = useState("start");
   const [food, setFood] = useState(
-    Math.floor(Math.random() * (gridSize * gridSize)) + 1
+    Math.floor(Math.random() * (gridSize * gridSize))
   );
   const updateSnake = () => {
     if (updateValue !== null && gameStatus === "start") {
@@ -32,7 +32,7 @@ function SnakeGame() {
     if (snake[0] === food) {
       snake.unshift(food);
       setSnake([...snake]);
-      setFood(Math.floor(Math.random() * (gridSize * gridSize)) + 1);
+      setFood(Math.floor(Math.random() * (gridSize * gridSize)));
     }
   };
   const gameOver = () => {
@@ -162,9 +162,7 @@ function SnakeGame() {
                   className="m-1"
                   onClick={() => {
                     setSnake([20, 2]);
-                    setFood(
-                      Math.floor(Math.random() * (gridSize * gridSize)) + 1
-                    );
+                    setFood(Math.floor(Math.random() * (gridSize * gridSize)));
                     gameStart();
                   }}
                 >
