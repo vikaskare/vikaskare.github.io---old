@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./bootstrap.css";
-import { HashRouter } from "react-router-dom";
+// import { HashRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
-      <App />
-    </HashRouter>
+    {/* <HashRouter> */}
+    <App />
+    {/* </HashRouter> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

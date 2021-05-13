@@ -12,6 +12,7 @@
   grid-template-columns: repeat(18, 1fr);
   grid-template-rows: repeat(18, 1fr);
   grid-gap: 1px;
+  /* border: 10px solid rgba(32, 92, 8, 0.904); */
 }
 .snake-game-cell {
   width: 100%;
@@ -24,8 +25,10 @@
   /* cursor: pointer; */
 }
 .snake-body {
-  background-color: blueviolet;
-  border-radius: 35%;
+  background-color: rgb(38, 206, 61);
+  border-radius: 20%;
+  border: 1px solid white;
+  /* background-image: ; */
 }
 .snake-food {
   /* background-color: rgb(226, 80, 43); */

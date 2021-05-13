@@ -109,9 +109,7 @@ function TicTacToe() {
       <Container>
         <Row className="d-flex justify-content-center">
           <Col md={6}>
-            <h1 className="text-center pt-3">Let's Start</h1>
-            <hr />
-            <div className="d-flex justify-content-between my-0">
+            <div className="d-flex justify-content-between mt-3">
               <p>Player 1 : X</p>
               <p>
                 Turn : <big>{state.currentUser}</big>

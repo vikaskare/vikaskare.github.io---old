@@ -13,7 +13,7 @@ function App() {
     <div>
       <Router>
         {/* <Announcement show={true} variant="warning" /> */}
-
+        <Header />
         <div className="body">
           <Switch>
             <Route exact path="/" component={Home} />

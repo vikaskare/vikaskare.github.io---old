@@ -29,8 +29,9 @@ function SnakeGame() {
     }
   };
   const checkFoodAte = () => {
-    if (snake[0] === food) {
-      snake.unshift(food);
+    if (snake[snake.length - 1] === food) {
+      setScore(score + 1);
+      snake.push(food);
       setSnake([...snake]);
       setFood(Math.floor(Math.random() * (gridSize * gridSize)));
     }
@@ -45,32 +46,41 @@ function SnakeGame() {
     setUpdateValue(1);
     setGameStatus("start");
     setSnake([20, 2]);
+    setScore(0);
   };
   const checkForCollide = () => {
     if (snake[0] < 0 || snake[0] > gridSize * gridSize) {
       gameOver();
     }
+    let tempSnake = [...snake];
+    tempSnake.shift();
+    if (tempSnake.includes(snake[0])) {
+      gameOver();
+    }
   };
-
+  const changeSnakeDirection = (value) => {
+    console.log(value, -value, updateValue);
+    setUpdateValue(value);
+  };
   const handleKeyDown = (event) => {
     if (gameStatus !== "start") {
       setGameStatus("start");
     }
     // left key
     if (event.keyCode === 37 || event.keyCode === 65) {
-      setUpdateValue(-1);
+      changeSnakeDirection(-1);
     }
     // up key
     else if (event.keyCode === 38 || event.keyCode === 87) {
-      setUpdateValue(-18);
+      changeSnakeDirection(-18);
     }
     // right key
     else if (event.keyCode === 39 || event.keyCode === 68) {
-      setUpdateValue(1);
+      changeSnakeDirection(1);
     }
     // down key
     else if (event.keyCode === 40 || event.keyCode === 83) {
-      setUpdateValue(18);
+      changeSnakeDirection(18);
     }
   };
 
@@ -82,6 +92,7 @@ function SnakeGame() {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
+
   useEffect(() => {
     const update = setInterval(() => {
       updateSnake();
@@ -94,11 +105,9 @@ function SnakeGame() {
 
   return (
     <>
-      <h1 className="text-center pt-3">Let's Play</h1>
-      <hr />
       <Container>
         <Row className="w-100">
-          <Col md={12} lg={8} className="mb-3">
+          <Col md={12} lg={8} className="my-3">
             <div className="snake-game-container">
               <div className="snake-game-grid">
                 {board.map((item, index) => {
@@ -123,7 +132,7 @@ function SnakeGame() {
                 <Button
                   className="m-1"
                   onClick={() => {
-                    setUpdateValue(-1);
+                    changeSnakeDirection(-1);
                     setGameStatus("start");
                   }}
                 >
@@ -132,7 +141,7 @@ function SnakeGame() {
                 <Button
                   className="m-1"
                   onClick={() => {
-                    setUpdateValue(-gridSize);
+                    changeSnakeDirection(-gridSize);
                     setGameStatus("start");
                   }}
                 >
@@ -141,7 +150,7 @@ function SnakeGame() {
                 <Button
                   className="m-1"
                   onClick={() => {
-                    setUpdateValue(gridSize);
+                    changeSnakeDirection(gridSize);
                     setGameStatus("start");
                   }}
                 >
@@ -150,7 +159,7 @@ function SnakeGame() {
                 <Button
                   className="m-1"
                   onClick={() => {
-                    setUpdateValue(1);
+                    changeSnakeDirection(1);
                     setGameStatus("start");
                   }}
                 >
@@ -171,9 +180,9 @@ function SnakeGame() {
               </div>
             </div>
           </Col>
-          <Col lg={4} className="pl-5">
+          <Col lg={4} className="pl-5 my-lg-3">
             <h5>
-              Score : <span className="text-success">{snake.length - 2}</span>
+              Score : <span className="text-success">{score}</span>
             </h5>
             <h6>Instructions:</h6>
             <p className="text-success">- Press any control key to start.</p>

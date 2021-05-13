@@ -67,8 +67,6 @@ function RockPaperScissors() {
       <Container className="text-center py-3  .justify-content-center">
         <Row className="justify-content-center">
           <Col md={6}>
-            <h1>Make a Choice</h1>
-            <hr />
             <div className="d-flex justify-content-between my-0">
               <p>
                 Your Score: <b>{state.userScore}</b>
